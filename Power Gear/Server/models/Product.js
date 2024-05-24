@@ -5,6 +5,7 @@ module.exports=(connection,DataTypes)=>{
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique:true
     },
     price: {
       type: DataTypes.FLOAT,
@@ -17,9 +18,13 @@ module.exports=(connection,DataTypes)=>{
       type: DataTypes.STRING,
       allowNull: false,
     },
-    outOfStock:{
-     type: DataTypes.BOOLEAN,
-     defaultValue:false
+    stock:{
+     type: DataTypes.FLOAT,
+    allowNull:false
+    },
+    picture: {
+      type: DataTypes.STRING, 
+      allowNull: false, 
     }
   });
   
