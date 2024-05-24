@@ -8,12 +8,14 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar  />
       <Banner />
       <FeaturedProducts />
+      
       <div  style={{
-            color: "#023047",
-            backgroundColor: "#FFB703",
+            color: "#ffb703",
+            backgroundColor: "#e0e1dd",
+            textAlign:'center'
           }}>
         <Typography
           variant="h2"
@@ -22,31 +24,30 @@ function Home() {
           to="/about"
           style={{
             color: "#023047",
-            backgroundColor: "#FFB703",
-            marginLeft: "50px",
-            textDecoration: 'none'
+            backgroundColor: "#e0e1dd",
+            
+            textDecoration: 'none',
+            
           }}
         >
-          About Us
+          <br />
+        <b>About Us</b>  
         </Typography>
         <Typography
            style={{
             color: "#023047",
-            backgroundColor: "#FFB703",
+            backgroundColor: "#e0e1dd",
             marginLeft: "50px",
-            textDecoration: 'none'
+            textDecoration: 'none',
+            paddingBottom:"50px"
           }}
           component={Link}
           to="/about"
         >
-          <div>
+          
             <h1>Power Gear: Fueling Your Potential</h1>
-            <h2>Our Story</h2>
-            <ul>
-              <li>Born from the raw power of athletes pushing their limits.</li>
-              <li>Built to empower athletes to conquer their goals.</li>
-            </ul>
-          </div>
+          
+          <br />
         </Typography>
       </div>
     </div>

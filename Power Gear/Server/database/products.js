@@ -14,9 +14,10 @@ module.exports = {
     },
       
       getOneProduct: async (req, res) => {
-        const productId = req.params.productid;
+        const productId = req.params.productId;
+        console.log(productId);
         try {
-          const product = await db.Product.findByPk(productId,{ include: db.User }); 
+          const product = await db.Product.findByPk(productId); 
           if (!product) {
             return res.status(404).send("product not found");
           }
@@ -64,5 +65,15 @@ module.exports = {
           res.status(500).send("Error fetching product");
         }
       },
+      getByCategory: async (req, res) => {
+        const category = req.params.category;
+        try {
+        const response=await db.Product.findAll({ where:{category:category}  }); 
+        res.json(response);
+        } catch (error) {
+          console.error(error);
+          res.status(500).send("Error fetching product");
+        }
+      }
     };
         
