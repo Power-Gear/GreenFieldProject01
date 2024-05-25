@@ -62,7 +62,7 @@ const Cart = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/User/order', orderData);
+      const response = await axios.post('http://localhost:5000/User/orders', orderData);
       alert('Order placed successfully!');
       setCartItems([]);
       alert('Proceeding to buy');

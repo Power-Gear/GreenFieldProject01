@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../database/products');
 const User = require("../database/users");
-const Order = require('../database/order');
+const Order = require('../database/orders');
 
 
 router.get('/products', Product.getAllproducts);
